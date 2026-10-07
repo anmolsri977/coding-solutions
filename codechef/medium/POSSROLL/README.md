@@ -67,7 +67,7 @@ The die has $4$ faces, numbered $3, 6, 9, 12$. Since $15$ is not one of these fa
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-07T15:09:45.208Z  
+**Submitted:** 2026-10-07T15:28:21.195Z  
 
 ```java
 import java.util.*;
@@ -85,19 +85,11 @@ class Codechef
 		    int x=sc.nextInt();
 		    int k=sc.nextInt();
 		    int y=sc.nextInt();
-		    boolean possible = true;
-
-for(int i = 1; i <= x; i++) {
-    if(y % (k * i) != 0) {
-        possible = false;
-        break;
-    }
-}
-
-if(possible)
-    System.out.println("YES");
-else
-    System.out.println("NO");
+		    if(y%k == 0 && y/k >=1 && y/k<=x){
+		        System.out.println("YES");
+		    }else{
+		        System.out.println("NO");
+		    }
 		    
 		}
 
