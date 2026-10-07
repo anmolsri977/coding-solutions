@@ -10,19 +10,25 @@ class Codechef
 		Scanner sc=new Scanner(System.in);
 		int t=sc.nextInt();
 		while(t-->0){
-		    String n=sc.next();
-		    String m=sc.next();
-		    int start=0;int max=Integer.MIN_VALUE;int c=0;
-		    for(int end=0;end<n.length();end++){
-		        if(m.contains(n.charAt(end))){
-		            c++;
+		    int n=sc.nextInt();
+		    int m=sc.nextInt();
+		    String s=sc.next();
+		    String l=sc.next();
+		    int curr=1;
+		    int ans=1;
+		    for(int i=1;i<n;i++){
+		        boolean hand1=l.contains(""+s.charAt(i-1));
+		        boolean hand2=l.contains(""+s.charAt(i));
+		        if(hand1==hand2){
+		            curr++;
+		            
 		        }
-		        while(!m.contains(n.charAt(end))){
-		            start++;
+		        else{
+		            curr=1;
 		        }
-		        max=Math.max(c,max);
+		        ans=Math.max(ans,curr);
 		    }
-		    System.out.println(max);
+		    System.out.println(ans);
 		}
 		
 
