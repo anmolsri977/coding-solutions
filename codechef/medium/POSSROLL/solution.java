@@ -8,8 +8,7 @@ class Codechef
 	{
 		// your code goes here
 		Scanner sc=new Scanner(System.in);
-		int t=sc.nextInt();
-		while(t-->0){
+		
 		    int x=sc.nextInt();
 		    int k=sc.nextInt();
 		    int y=sc.nextInt();
@@ -19,7 +18,7 @@ class Codechef
 		        System.out.println("NO");
 		    }
 		    
-		}
+		
 
 	}
 }
