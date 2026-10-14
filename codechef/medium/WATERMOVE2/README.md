@@ -58,14 +58,14 @@ Output
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-14T16:01:21.775Z  
+**Submitted:** 2026-10-14T16:02:14.941Z  
 
 ```java
 import java.util.*;
 
 class Codechef {
     public static void main(String[] args) throws Exception {
-        Scanner sc = new Scanner(System.in);
+         Scanner sc = new Scanner(System.in);
 
         int T = sc.nextInt();
 
@@ -81,9 +81,11 @@ class Codechef {
 
             Arrays.sort(A);
 
+            int take = Math.min(N, K + 1);
+
             long ans = 0;
 
-            for (int i = N - 1; i >= N - K - 1; i--) {
+            for (int i = N - 1; i >= N - take; i--) {
                 ans += A[i];
             }
 
