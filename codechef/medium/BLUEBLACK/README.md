@@ -63,7 +63,7 @@ Chef can buy $3$ blue pens for a cost of $30$.
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-14T15:35:45.044Z  
+**Submitted:** 2026-10-14T15:38:37.407Z  
 
 ```java
 import java.util.*;
@@ -75,6 +75,11 @@ class Codechef
 	public static void main (String[] args) throws java.lang.Exception
 	{
 		// your code goes here
+		Scanner sc=new Scanner(System.in);
+		int a=sc.nextInt();
+		int b=sc.nextInt();
+		int ans=Math.min(a+b,3*a);
+		System.out.println(ans);
 
 	}
 }
