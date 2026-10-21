@@ -53,7 +53,7 @@ Test case $1$: $14 = 1 + 2 + 4 + 7$ uses $K = 4$.
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-21T16:13:50.804Z  
+**Submitted:** 2026-10-21T16:14:30.639Z  
 
 ```java
 import java.util.*;
