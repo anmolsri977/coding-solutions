@@ -53,11 +53,12 @@ Output
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-21T16:17:27.143Z  
+**Submitted:** 2026-10-21T16:17:40.266Z  
 
 ```java
-
 import java.util.*;
+import java.lang.*;
+import java.io.*;
 
 class Codechef {
     public static void main(String[] args) {
