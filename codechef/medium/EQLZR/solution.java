@@ -21,43 +21,37 @@ class Codechef
             int score = 0;
 
             for (int i = 0; i < n - 1; i++) {
-                if (a[i] == a[i + 1]) {
-                    score++;
-                }
+                if (a[i] == a[i + 1]) score++;
             }
 
-            int best = score;
-            int maxGain = 0;
+            int[] best = new int[n + 1];
+            int ans = score;
 
-            for (int l = 0; l < n; l++) {
+            for (int i = 1; i < n; i++) {
                 int gain = 0;
 
-                if (l > 0) {
-                    if (a[l - 1] == a[l] + 1) gain++;
-                    if (a[l - 1] == a[l]) gain--;
-                }
+                if (a[i - 1] == a[i] + 1) gain++;
+                if (a[i - 1] == a[i]) gain--;
 
-                maxGain = Math.max(maxGain, gain);
-
-                for (int r = l; r < n; r++) {
-                    int current = score;
-
-                    if (l > 0) {
-                        if (a[l - 1] == a[l]) current--;
-                        if (a[l - 1] == a[l] + 1) current++;
-                    }
-
-                    if (r < n - 1) {
-                        if (a[r] == a[r + 1]) current--;
-                        if (a[r] + 1 == a[r + 1]) current++;
-                    }
-
-                    best = Math.max(best, current);
-                }
+                best[i] = Math.max(best[i - 1], gain);
             }
 
-            System.out.println(best);
+            int suffix = 0;
+
+            for (int r = n - 1; r >= 0; r--) {
+                int rightGain = 0;
+
+                if (r < n - 1) {
+                    if (a[r] + 1 == a[r + 1]) rightGain++;
+                    if (a[r] == a[r + 1]) rightGain--;
+                }
+
+                ans = Math.max(ans, score + rightGain + (r > 0 ? best[r] : 0));
+            }
+
+            System.out.println(ans);
         }
+
 
 	}
 }
