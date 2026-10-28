@@ -70,7 +70,7 @@ Output
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-28T16:06:12.856Z  
+**Submitted:** 2026-10-28T16:06:18.857Z  
 
 ```java
 import java.util.*;
